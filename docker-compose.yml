@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    image: organization_chart
+    container_name: organization_chart_app
+    restart: always
+    environment:
+      STAGE: debug
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./organization:/app
+    networks:
+      - organization_chart_network
+    command: python manage.py runserver 0.0.0.0:8000
+
+networks:
+  organization_chart_network:
+    driver: bridge
