@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8324c3f07044b76eb2d19b0ebd00633b48ccc3d47013b0122dae0fb968d1db07"
+            "sha256": "ba6a4bd771fe083447c4797700367ec8fa1d7189a2c58a7d60501e1fb29bdfab"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,12 +24,54 @@
             "index": "pypi",
             "version": "==2.2.1"
         },
+        "django-extensions": {
+            "hashes": [
+                "sha256:109004f80b6f45ad1f56addaa59debca91d94aa0dc1cb19678b9364b4fe9b6f4",
+                "sha256:307766e5e6c1caffe76c5d99239d8115d14ae3f7cab2cd991fcffd763dad904b"
+            ],
+            "index": "pypi",
+            "version": "==2.1.6"
+        },
+        "django-neomodel": {
+            "hashes": [
+                "sha256:2a51fc5754e45b959e5fb82d1ae2b1fa9702edf5ea5b9c99272781f0fa32955d",
+                "sha256:927e1eac7943b37b41da17de4559138e50c9ee7e0f7f0e6bf04223b0ac0fcccf"
+            ],
+            "index": "pypi",
+            "version": "==0.0.4"
+        },
+        "neo4j-driver": {
+            "hashes": [
+                "sha256:6630ecf77db181430e9b1c8656a4a0ccb96b2354492b59bed42837d56e44b264"
+            ],
+            "version": "==1.6.3"
+        },
+        "neomodel": {
+            "hashes": [
+                "sha256:38dec8f65ee60158e0db51f2965483c1f493fba90ac8fea58c0b0fd6891e3374",
+                "sha256:7e2e7e5396b1848f78aa289737924243819eba9e3d89bbaad3592cb3fc7eaa88"
+            ],
+            "version": "==3.3.1"
+        },
+        "neotime": {
+            "hashes": [
+                "sha256:4e0477ba0f24e004de2fa79a3236de2bd941f20de0b5db8d976c52a86d7363eb"
+            ],
+            "version": "==1.7.4"
+        },
         "pytz": {
             "hashes": [
                 "sha256:303879e36b721603cc54604edcac9d20401bdbe31e1e4fdee5b9f98d5d31dfda",
                 "sha256:d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141"
             ],
             "version": "==2019.1"
+        },
+        "six": {
+            "hashes": [
+                "sha256:3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c",
+                "sha256:d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
+            ],
+            "version": "==1.12.0"
         },
         "sqlparse": {
             "hashes": [

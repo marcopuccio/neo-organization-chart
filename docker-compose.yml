@@ -8,6 +8,7 @@ services:
     restart: always
     environment:
       STAGE: debug
+      NEO4J_BOLT_URL: bolt://neo4j:organization_chart_pwd@neo:7687
     ports:
       - "8000:8000"
     volumes:
@@ -23,7 +24,7 @@ services:
     container_name: organization_chart_database
     restart: always
     environment:
-      NEO4J_AUTH: neo4j/organization_chart
+      NEO4J_AUTH: neo4j/organization_chart_pwd
     ports:
       - "7474:7474"
       - "7687:7687"

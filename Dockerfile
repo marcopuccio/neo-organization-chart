@@ -3,7 +3,7 @@ ENV PYTHONUNBUFFERED 1
 
 # Copy source to app dir
 RUN mkdir /app
-COPY ["Pipfile", "Pipfile.lock", "organization/", "/app/"]
+COPY ["organization/", "Pipfile", "Pipfile.lock", "/app/"]
 WORKDIR /app
 
 # Install deps and remove apt lists
@@ -15,4 +15,5 @@ RUN apt-get update \
   && pip install --upgrade pip \
   && pip install pipenv \
   && pipenv install --system --deploy \
-  && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/*
+  && apt-get autoremove -y \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*

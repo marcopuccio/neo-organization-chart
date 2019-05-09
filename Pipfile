@@ -8,6 +8,8 @@ flake8 = "*"
 
 [packages]
 django = "==2.2.1"
+django-neomodel = "==0.0.4"
+django-extensions = "==2.1.6"
 
 [requires]
 python_version = "3.6"
