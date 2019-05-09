@@ -30,7 +30,14 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+def merge_apps(*apps_lists):
+    merged_apps = []
+    for apps in apps_lists:
+        merged_apps += apps
+    return merged_apps
+
+
+FRAMEWORK_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +45,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_PARTY_APPS = [
+    'django_neomodel',
+    'django_extensions',
+]
+
+PROJECT_APPS = [
+    'hierarchies.apps.HierarchiesConfig',
+]
+
+INSTALLED_APPS = FRAMEWORK_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,6 +98,7 @@ DATABASES = {
     }
 }
 
+NEOMODEL_NEO4J_BOLT_URL = os.environ['NEO4J_BOLT_URL']
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
